@@ -1,0 +1,8 @@
+ref: sfaisal/${basearch}/kubernetesos/master
+include: fedora-coreos-config/manifest.yaml
+
+packages:
+- kubernetes
+
+repos:
+- fedora
