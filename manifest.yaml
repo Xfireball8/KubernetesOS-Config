@@ -17,8 +17,8 @@ postprocess:
       rm /etc/ostree/remotes.d/fedora.conf
       
       # rename /var/kubelet folder to /var/kubernetes
-      set -xeuo pipefail
-      mv /var/lib/kubelet /var/lib/kubernetes
+      # set -xeuo pipefail
+      # mv /var/lib/kubelet /var/lib/kubernetes
       
       # delete etcd.service
       set -xeuo pipefail
