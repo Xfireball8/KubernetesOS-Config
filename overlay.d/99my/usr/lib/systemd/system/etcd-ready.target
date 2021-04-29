@@ -1,4 +1,4 @@
 [Unit]
 Description=Etcd is Running and available for Kubernetes
-Requires=etcd.service multi-user.target
-After=etcd.service
+Requires=k8sos-etcd.service multi-user.target
+After=k8sos-etcd.service
