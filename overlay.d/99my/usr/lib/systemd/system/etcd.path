@@ -2,5 +2,10 @@
 Description=Etcd service can be activated if cert and config is given
 
 [Path]
-PathExists=/etc/etcd/ca.pem /etc/etcd/kubernetes.pem /etc/etcd/kubernetes-key.pem
+PathExists=/etc/etcd/ca.pem
+PathExists=/etc/etcd/kubernetes.pem
+PathExists=/etc/etcd/kubernetes-key.pem
 Unit=k8sos-etcd.service
+
+[Install]
+WantedBy=multi-user.target
