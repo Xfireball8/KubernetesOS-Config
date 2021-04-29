@@ -15,11 +15,11 @@ postprocess:
       #!/usr/bin/env bash
       set -xeuo pipefail
       rm /etc/ostree/remotes.d/fedora.conf
-    # rename /var/kubelet folder to /var/kubernetes
-    - |
+      
+      # rename /var/kubelet folder to /var/kubernetes
       set -xeuo pipefail
       mv /var/lib/kubelet /var/lib/kubernetes
-    # delete etcd.service
-    - |
+      
+      # delete etcd.service
       set -xeuo pipefail
       rm -rf /etc/systemd/system/etcd.service
