@@ -9,10 +9,6 @@ packages:
 repos:
 - fedora
 
-units:
-- etcd.path
-- etcd-ready.target
-
 postprocess:
     # remove the "fedora" ostree remote
     - |
