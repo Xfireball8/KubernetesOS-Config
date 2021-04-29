@@ -2,7 +2,16 @@ ref: sfaisal/${basearch}/kubernetesos/master
 include: fedora-coreos-config/manifest.yaml
 
 packages:
-- kubernetes
+- kubernetes-master
+- etcd
+
 
 repos:
 - fedora
+
+postprocess:
+    # remove the "fedora" ostree remote
+    - |
+      #!/usr/bin/env bash
+      set -xeuo pipefail
+      rm /etc/ostree/remotes.d/fedora.conf

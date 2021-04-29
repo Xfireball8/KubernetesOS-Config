@@ -15,7 +15,7 @@ extra-kargs:
 ignition-network-kcmdline: []
 
 # Optional remote by which to prefix the deployed OSTree ref
-ostree-remote: fedora
+ostree-remote: kubernetesos-master
 
 # We want read-only /sysroot to protect from unintentional damage.
 # https://github.com/ostreedev/ostree/issues/1265
