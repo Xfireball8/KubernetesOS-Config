@@ -1,0 +1,6 @@
+[Unit]
+Description=Etcd service can be activated if cert and config is given
+
+[Path]
+PathExists=/etc/etcd/ca.pem /etc/etcd/kubernetes.pem /etc/etcd/kubernetes-key.pem
+Unit=etcd.service
