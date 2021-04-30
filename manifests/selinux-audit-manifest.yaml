@@ -1,0 +1,7 @@
+packages:
+- coreutils
+- policycoreutils
+- policycoreutils-python-utils
+- policycoreutils-newrole
+- setools-console
+- setroubleshoot

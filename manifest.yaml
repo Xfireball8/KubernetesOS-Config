@@ -1,20 +1,15 @@
-ref: sfaisal/${basearch}/kubernetesos/master
-include: 
-- manifests/fedora-coreos.yaml
-- selinux-audit-manifest.yaml
+include: manifests/kubernetesos.yaml
 
-releasever: "1"
+releasever: "33"
 
-packages:
-- kubernetes-master
-- etcd
+rojig:
+  license: MIT
+  name: fedora-coreos
+  summary: Fedora CoreOS stable
 
 repos:
-- fedora
+  - fedora
+  - fedora-coreos-pool
 
-postprocess:
-    # remove the "fedora" ostree remote
-    - |
-      #!/usr/bin/env bash
-      set -xeuo pipefail
-      rm /etc/ostree/remotes.d/fedora.conf
+add-commit-metadata:
+  fedora-coreos.stream: stable
