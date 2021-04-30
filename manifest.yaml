@@ -1,5 +1,6 @@
 ref: sfaisal/${basearch}/kubernetesos/master
 include: fedora-coreos-config/manifest.yaml
+include: selinux-audit-manifest.yaml
 
 packages:
 - kubernetes-master
