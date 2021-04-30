@@ -1,11 +1,13 @@
 ref: sfaisal/${basearch}/kubernetesos/master
-include: fedora-coreos-config/manifest.yaml
-include: selinux-audit-manifest.yaml
+include: 
+- manifests/fedora-coreos.yaml
+- selinux-audit-manifest.yaml
+
+releasever: "1"
 
 packages:
 - kubernetes-master
 - etcd
-
 
 repos:
 - fedora
@@ -16,11 +18,3 @@ postprocess:
       #!/usr/bin/env bash
       set -xeuo pipefail
       rm /etc/ostree/remotes.d/fedora.conf
-      
-      # rename /var/kubelet folder to /var/kubernetes
-      # set -xeuo pipefail
-      # mv /var/lib/kubelet /var/lib/kubernetes
-      
-      # delete etcd.service
-      set -xeuo pipefail
-      rm -rf /etc/systemd/system/etcd.service
