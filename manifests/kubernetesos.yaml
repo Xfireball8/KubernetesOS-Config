@@ -18,3 +18,4 @@ postprocess:
       #!/usr/bin/env bash
       set -xeuo pipefail
       rm /etc/ostree/remotes.d/fedora.conf
+      sed 's/SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
