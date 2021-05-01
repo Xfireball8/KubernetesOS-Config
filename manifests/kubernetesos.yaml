@@ -1,7 +1,6 @@
 ref: sfaisal/${basearch}/kubernetesos/master
 include: 
 - fedora-coreos.yaml
-#- selinux-audit-manifest.yaml
 
 releasever: "1"
 
