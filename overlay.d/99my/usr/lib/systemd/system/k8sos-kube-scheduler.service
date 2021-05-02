@@ -2,8 +2,8 @@
 Description=Kubernetes Scheduler
 
 [Service]
-ExecStart=/bin/kube-scheduler \\
-  --config=/etc/kubernetes/kube-scheduler.yaml \\
+ExecStart=/bin/kube-scheduler \
+  --config=/etc/kubernetes/kube-scheduler.yaml \
   --v=2
 Restart=on-failure
 RestartSec=5
