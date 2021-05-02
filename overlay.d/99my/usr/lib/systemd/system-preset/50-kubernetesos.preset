@@ -1,5 +1,5 @@
 enable etcd.path
 enable etcd-ready.target
-enable kube-apiserver.service
-enable kube-controller-manager.service
-enable kube-scheduler.service
+enable k8sos-kube-apiserver.service
+enable k8sos-kube-controller-manager.service
+enable k8sos-kube-scheduler.service
