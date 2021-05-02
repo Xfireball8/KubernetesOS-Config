@@ -1,7 +1,9 @@
 [Unit]
 Description=Etcd is Running and available for Kubernetes
 Requires=k8sos-etcd.service multi-user.target
-After=multi-user.target k8sos-etcd.service
+After=k8sos-etcd.service multi-user.target
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
