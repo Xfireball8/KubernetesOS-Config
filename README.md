@@ -21,7 +21,9 @@ It uses SystemD (services, path and target units) to get to the desired state pr
 
 multi-user.target -> etcd-ready.target -> kubernetes-ready.target -> gitlab-running.target (basically)
 
-On the air updates are activated but it's not working because i intended to implement a Continuous Integration chain where it'll be done automatically, and i'm working heavily on it right now to get a PoC running fast.
+On the air updates are activated but it's not working because i intend to implement a Continuous Integration chain where it'll be done automatically, and i'm working heavily on some particular things right now to get a PoC running fast.
+
+It needs some work (SELinux Up and Running, RPM creation and distrib repo management, Updates ; it's WIP)
 
 Repo for the Super-Admin IaC is there : https://github.com/Xfireball8/AWSSuperAdminCode
 Repo for the DevOps Engineer IaC is there : https://github.com/Xfireball8/SaasProjectCluster
