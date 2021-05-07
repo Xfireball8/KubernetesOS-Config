@@ -20,7 +20,7 @@ ExecStart=/bin/etcd \
   --data-dir=/var/lib/etcd
 Restart=on-failure
 RestartSec=5
-Wants=etcd-ready.target
+
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=etcd-ready.target

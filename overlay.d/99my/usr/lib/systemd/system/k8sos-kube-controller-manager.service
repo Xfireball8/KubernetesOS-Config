@@ -17,6 +17,8 @@ ExecStart=/bin/kube-controller-manager \
   --v=2
 Restart=on-failure
 RestartSec=5
+Requires=etcd-ready.target
+After=etcd-ready.target
 
 [Install]
-WantedBy=etcd-ready.target
+WantedBy=kubernetes-ready.target
