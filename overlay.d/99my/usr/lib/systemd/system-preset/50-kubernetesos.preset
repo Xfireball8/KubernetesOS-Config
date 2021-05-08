@@ -1,3 +1,3 @@
-enable kubelet.service
-enable kube-proxy.service
+enable k8sos-kubelet.service
+enable k8sos-kube-proxy.service
 enable kubernetes-ready.target
