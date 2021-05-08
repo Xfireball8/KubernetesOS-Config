@@ -1,12 +1,11 @@
-ref: sfaisal/${basearch}/kubernetesos/master
+ref: sfaisal/${basearch}/kubernetesos/worker
 include: 
 - fedora-coreos.yaml
 
 releasever: "1"
 
 packages:
-- kubernetes-master
-- etcd
+- kubernetes-node
 
 repos:
 - fedora
