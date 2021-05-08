@@ -22,4 +22,3 @@ postprocess:
       set -xeuo pipefail
       rm /etc/ostree/remotes.d/fedora.conf
       sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
-      sudo swapoff -a
