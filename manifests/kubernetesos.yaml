@@ -6,6 +6,10 @@ releasever: "1"
 
 packages:
 - kubernetes-node
+- socat
+- conntrack
+- ipset
+- containernetworking-plugins
 
 repos:
 - fedora
@@ -18,3 +22,4 @@ postprocess:
       set -xeuo pipefail
       rm /etc/ostree/remotes.d/fedora.conf
       sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+      swapoff -a

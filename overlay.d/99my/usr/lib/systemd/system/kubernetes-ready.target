@@ -1,7 +1,7 @@
 [Unit]
-Description=Kubernetes Control Plane Elements are Running Successfully
-Requires=etcd-ready.target
-After=etcd-ready.target k8sos-kube-apiserver.service k8sos-controller-manager.service k8sos-kube-scheduler.service
+Description=Kubelet components are running successfully
+Requires=multi-user.target
+After=kubelet.service kube-proxy.service
 
 [Install]
-WantedBy=etcd-ready.target
+WantedBy=multi-user.target
