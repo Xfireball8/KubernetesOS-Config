@@ -9,6 +9,7 @@ ExecStart=/bin/kubelet \
   --config=/var/lib/kubelet/kubelet-config.yaml \
   --image-pull-progress-deadline=2m \
   --kubeconfig=/var/lib/kubelet/kubeconfig \
+  --cni-bin-dir=/usr/libexec/cni/ \
   --network-plugin=cni \
   --register-node=true \
   --v=2
