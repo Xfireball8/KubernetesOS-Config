@@ -4,7 +4,7 @@ Description=Kubernetes Controller Manager
 [Service]
 ExecStart=/bin/kube-controller-manager \
   --bind-address=0.0.0.0 \
-  --cluster-cidr=10.0.2.0/24 \
+  --cluster-cidr=10.200.0.0/16 \
   --cluster-name=kubernetes \
   --cluster-signing-cert-file=/var/lib/kubelet/ca.pem \
   --cluster-signing-key-file=/var/lib/kubelet/ca-key.pem \
